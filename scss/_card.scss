@@ -1,117 +1,89 @@
 @use "variables";
+@use "mixins";
 
 
 .card {
 
 
-    width: variables.$card-width;
+width:300px;
 
-    height: variables.$card-height;
+height:400px;
 
 
-    position: relative;
+position:relative;
 
 
-    transform-style: preserve-3d;
+transform-style:preserve-3d;
 
 
-    transition: transform variables.$transition;
+transition:transform variables.$transition;
 
 
-    cursor:pointer;
 
+&:hover,
+&:focus-visible {
 
 
-    &:hover,
-    &:focus-visible {
+transform:rotateY(180deg);
 
 
-        transform: rotateY(180deg);
+}
 
 
-        outline:none;
 
+&__front,
+&__back {
 
-    }
 
+position:absolute;
 
 
-    &__front,
-    &__back {
+width:100%;
 
 
-        position:absolute;
+height:100%;
 
 
-        width:100%;
+@include mixins.flex-center;
 
 
-        height:100%;
+flex-direction:column;
 
 
-        display:flex;
+@include mixins.card-style;
 
 
-        flex-direction:column;
+color:variables.$white;
 
 
-        justify-content:center;
+backface-visibility:hidden;
 
 
-        align-items:center;
+}
 
 
-        border-radius:variables.$border-radius;
 
+&__front {
 
-        color:variables.$white;
 
+background:variables.$primary-color;
 
-        backface-visibility:hidden;
 
+}
 
-        text-align:center;
 
 
-        padding:20px;
+&__back {
 
 
-    }
+background:variables.$secondary-color;
 
 
+transform:rotateY(180deg);
 
-    &__front {
 
+}
 
-        background:variables.$primary-color;
 
-
-    }
-
-
-
-    &__back {
-
-
-        background:variables.$secondary-color;
-
-
-        transform:rotateY(180deg);
-
-
-    }
-
-
-
-    @media(max-width:500px){
-
-
-        width:250px;
-
-
-        height:350px;
-
-
-    }
 
 }
