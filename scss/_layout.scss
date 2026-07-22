@@ -1,0 +1,68 @@
+@use "variables";
+
+
+body {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    background-color: variables.$background-color;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+.container {
+
+
+    width: 90%;
+
+
+    max-width: 1200px;
+
+
+    display: grid;
+
+
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+
+
+    gap: 50px;
+
+
+    align-items: center;
+
+
+    justify-items: center;
+
+
+
+    @media(max-width: 900px) {
+
+
+        grid-template-columns: 1fr;
+
+
+        gap: 30px;
+
+
+    }
+
+
+
+    @media(max-width:500px){
+
+
+        width:95%;
+
+
+    }
+
+}

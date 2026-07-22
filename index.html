@@ -37,41 +37,72 @@
 
     <section class="form">
 
-        <h2>Contacto</h2>
-
-        <form>
-
-            <label for="name">
-                Nombre
-            </label>
-
-            <input 
-                id="name"
-                type="text"
-                required
-                minlength="3"
-            >
+<h2>Contacto</h2>
 
 
-            <label for="email">
-                Email
-            </label>
-
-            <input 
-                id="email"
-                type="email"
-                required
-            >
+<form>
 
 
-            <button type="submit">
-                Enviar
-            </button>
+<label for="name">
+Nombre
+</label>
 
 
-        </form>
+<input 
+id="name"
+name="name"
+type="text"
+placeholder="Ingrese su nombre"
+required
+minlength="3"
+aria-describedby="name-error"
+>
 
-    </section>
+
+<span 
+class="error-message"
+id="name-error"
+aria-live="polite"
+>
+El nombre debe tener al menos 3 caracteres.
+</span>
+
+
+
+<label for="email">
+Email
+</label>
+
+
+<input
+id="email"
+name="email"
+type="email"
+placeholder="correo@email.com"
+required
+aria-describedby="email-error"
+>
+
+
+<span
+class="error-message"
+id="email-error"
+aria-live="polite"
+>
+Ingrese un email válido.
+</span>
+
+
+
+<button type="submit">
+Enviar
+</button>
+
+
+</form>
+
+
+</section>
 
 
 </main>

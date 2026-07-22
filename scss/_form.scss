@@ -4,74 +4,155 @@
 .form {
 
 
-background:white;
-
-padding:20px;
-
-border-radius:10px;
+    background:variables.$white;
 
 
-display:flex;
-
-flex-direction:column;
+    padding:30px;
 
 
-gap:10px;
+    border-radius:variables.$border-radius;
 
 
-
-input {
-
-
-padding:10px;
+    width:300px;
 
 
-border:2px solid #ccc;
+    display:flex;
 
 
-&:valid {
+    flex-direction:column;
 
-border-color:green;
 
-}
+    gap:15px;
 
 
 
-&:invalid {
-
-border-color:red;
-
-}
+    h2 {
 
 
+        color:variables.$text-color;
 
-}
+
+    }
 
 
 
-button {
+    label {
 
 
-padding:10px;
-
-background:variables.$primary-color;
-
-color:white;
-
-border:none;
-
-cursor:pointer;
+        font-weight:bold;
 
 
-&:hover,
-&:focus {
-
-opacity:.8;
-
-}
+    }
 
 
-}
+
+    input {
+
+
+        padding:10px;
+
+
+        border:2px solid #ccc;
+
+
+        border-radius:8px;
+
+
+
+        &:focus {
+
+
+            outline:3px solid variables.$primary-color;
+
+
+        }
+
+
+
+        &:invalid:not(:placeholder-shown){
+
+
+            border-color:variables.$error-color;
+
+
+        }
+
+
+
+        &:valid {
+
+
+            border-color:variables.$success-color;
+
+
+        }
+
+
+    }
+
+
+
+    .error-message {
+
+
+        color:variables.$error-color;
+
+
+        font-size:.85rem;
+
+
+        display:none;
+
+
+    }
+
+
+
+    input:invalid:not(:placeholder-shown) + .error-message {
+
+
+        display:block;
+
+
+    }
+
+
+
+    button {
+
+
+        padding:12px;
+
+
+        background:variables.$primary-color;
+
+
+        color:variables.$white;
+
+
+        border:none;
+
+
+        border-radius:8px;
+
+
+        cursor:pointer;
+
+
+
+        &:hover,
+        &:focus-visible {
+
+
+            opacity:.8;
+
+
+            outline:3px solid variables.$white;
+
+
+        }
+
+    }
 
 
 }

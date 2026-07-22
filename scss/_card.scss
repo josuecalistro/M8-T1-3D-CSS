@@ -4,103 +4,114 @@
 .card {
 
 
-width:variables.$card-width;
+    width: variables.$card-width;
 
-height:variables.$card-height;
-
-position:relative;
+    height: variables.$card-height;
 
 
-transform-style:preserve-3d;
+    position: relative;
 
 
-transition:
-variables.$transition;
+    transform-style: preserve-3d;
 
 
-
-cursor:pointer;
-
+    transition: transform variables.$transition;
 
 
-&:hover,
-&:focus {
-
-    transform:rotateY(180deg);
-
-}
+    cursor:pointer;
 
 
 
-&__front,
-&__back {
+    &:hover,
+    &:focus-visible {
 
 
-position:absolute;
-
-width:100%;
-
-height:100%;
+        transform: rotateY(180deg);
 
 
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
+        outline:none;
 
 
-border-radius:
-variables.$radius;
-
-
-color:
-variables.$text-color;
-
-
-backface-visibility:hidden;
-
-
-text-align:center;
-
-
-}
+    }
 
 
 
-&__front {
-
-background:
-variables.$primary-color;
-
-}
+    &__front,
+    &__back {
 
 
-
-&__back {
-
-background:
-variables.$secondary-color;
+        position:absolute;
 
 
-transform:
-rotateY(180deg);
-
-}
+        width:100%;
 
 
-
-@media(max-width:500px){
-
-
-width:250px;
-
-height:350px;
+        height:100%;
 
 
-}
+        display:flex;
 
+
+        flex-direction:column;
+
+
+        justify-content:center;
+
+
+        align-items:center;
+
+
+        border-radius:variables.$border-radius;
+
+
+        color:variables.$white;
+
+
+        backface-visibility:hidden;
+
+
+        text-align:center;
+
+
+        padding:20px;
+
+
+    }
+
+
+
+    &__front {
+
+
+        background:variables.$primary-color;
+
+
+    }
+
+
+
+    &__back {
+
+
+        background:variables.$secondary-color;
+
+
+        transform:rotateY(180deg);
+
+
+    }
+
+
+
+    @media(max-width:500px){
+
+
+        width:250px;
+
+
+        height:350px;
+
+
+    }
 
 }
