@@ -1,0 +1,77 @@
+@use "variables";
+
+
+.form {
+
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+
+display:flex;
+
+flex-direction:column;
+
+
+gap:10px;
+
+
+
+input {
+
+
+padding:10px;
+
+
+border:2px solid #ccc;
+
+
+&:valid {
+
+border-color:green;
+
+}
+
+
+
+&:invalid {
+
+border-color:red;
+
+}
+
+
+
+}
+
+
+
+button {
+
+
+padding:10px;
+
+background:variables.$primary-color;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+
+&:hover,
+&:focus {
+
+opacity:.8;
+
+}
+
+
+}
+
+
+}

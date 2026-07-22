@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Define la cámara */
+.container {
+    width: 300px;
+    height: 400px;
+    perspective: 600px;
+}
+
+
+/* Elemento que gira */
+.card {
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition: transform 0.8s ease;
+
+}
+
+
+/* Giro al pasar el mouse */
+.container:hover .card {
+
+    transform: rotateY(180deg);
+
+}
+
+
+/* Caras de la tarjeta */
+.card__front,
+.card__back {
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+    color: white;
+
+    backface-visibility: hidden;
+
+}
+
+
+/* Cara frontal */
+.card__front {
+
+    background: #3498db;
+
+}
+
+
+/* Cara trasera */
+.card__back {
+
+    background: #e74c3c;
+
+    transform: rotateY(180deg);
+
+}

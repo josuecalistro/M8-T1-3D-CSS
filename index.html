@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta 3D</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tarjeta 3D SASS</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 
 <body>
 
-    <main class="container">
+<main class="container">
 
-        <div class="card">
+    <section 
+        class="card"
+        tabindex="0"
+        aria-label="Tarjeta interactiva 3D"
+    >
 
-            <div class="card__front">
-                <h2>Frontend</h2>
-                <p>Pasa el cursor para girar</p>
-            </div>
-
-            <div class="card__back">
-                <h2>CSS 3D</h2>
-                <p>Usando perspective y preserve-3d</p>
-            </div>
-
+        <div class="card__front">
+            <h2>Frontend</h2>
+            <p>Pasá el mouse o presioná Tab</p>
         </div>
 
-    </main>
+
+        <div class="card__back">
+            <h2>CSS 3D</h2>
+            <p>Perspective + Preserve 3D</p>
+        </div>
+
+
+    </section>
+
+
+
+    <section class="form">
+
+        <h2>Contacto</h2>
+
+        <form>
+
+            <label for="name">
+                Nombre
+            </label>
+
+            <input 
+                id="name"
+                type="text"
+                required
+                minlength="3"
+            >
+
+
+            <label for="email">
+                Email
+            </label>
+
+            <input 
+                id="email"
+                type="email"
+                required
+            >
+
+
+            <button type="submit">
+                Enviar
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+</main>
+
 
 </body>
 </html>
